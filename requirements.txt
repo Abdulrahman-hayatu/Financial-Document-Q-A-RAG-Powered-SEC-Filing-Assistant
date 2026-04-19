@@ -1,0 +1,33 @@
+# Core LangChain stack
+langchain==0.2.16
+langchain-community==0.2.16
+langchain-huggingface>=0.0.4
+langchain-text-splitters==0.2.0
+
+# Vector store
+faiss-cpu>=1.7.4
+
+# PDF loading
+pymupdf==1.24.10          # PDF parser
+
+# HuggingFace model hub + sentence embeddings
+sentence-transformers==3.1.1
+huggingface-hub==0.24.6
+
+# LLM inference (free HuggingFace Inference API)
+transformers==4.44.2
+
+# API and frontend
+fastapi==0.115.0
+uvicorn==0.30.6           # ASGI server to run FastAPI
+streamlit==1.38.0
+python-multipart==0.0.9   # for FastAPI file uploads
+requests==2.32.3          # Streamlit calls FastAPI via HTTP
+
+# Evaluation
+ragas==0.1.19
+datasets==2.21.0          # RAGAS requires HuggingFace datasets format
+
+# Utilities
+python-dotenv==1.0.1
+pydantic==2.8.2
