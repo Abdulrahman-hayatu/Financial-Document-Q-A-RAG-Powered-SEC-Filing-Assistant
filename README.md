@@ -1,4 +1,3 @@
-# Financial-Document-Q-A-RAG-Powered-SEC-Filing-Assistant
 # 📊 Financial Document Q&A — RAG-Powered SEC Filing Assistant
 
 ![Python](https://img.shields.io/badge/Python-3.11-blue)
@@ -25,20 +24,20 @@ User → Streamlit UI → FastAPI → LangChain RetrievalQA
                                         ↕
                      HuggingFace Embeddings (MiniLM-L6-v2)
                                         ↕
-                        LLM: Mistral-7B-Instruct (HuggingFace)
+                        LLM: llama-3.1-8b-instant (Groq)
 ```
 
 ## RAGAS Evaluation Results
 | Metric | Score |
 |---|---|
-| Faithfulness | 0.87 |
-| Answer Relevancy | 0.82 |
-| Context Recall | 0.79 |
-| Context Precision | 0.84 |
+| Faithfulness | 0.97 |
+| Answer Relevancy | 0.83 |
+| Context Recall | 1.00 |
+| Context Precision | 0.80 |
 
 ## Tech Stack
 - **Orchestration:** LangChain 0.2
-- **LLM:** Mistral-7B-Instruct via HuggingFace Inference API
+- **LLM:** llama-3.1-8b-instant via Groq Inference API
 - **Embeddings:** all-MiniLM-L6-v2 (sentence-transformers)
 - **Vector Store:** FAISS (cosine similarity)
 - **API:** FastAPI + Uvicorn
@@ -48,11 +47,11 @@ User → Streamlit UI → FastAPI → LangChain RetrievalQA
 
 ## Local Setup
 ```bash
-git clone https://github.com/YOUR_USERNAME/financial-rag.git
-cd financial-rag
+git clone https://github.com/elhayatusman/Financial-Document-Q-A-RAG-Powered-SEC-Filing-Assistant.git
+cd Financial-Document-Q-A-RAG-Powered-SEC-Filing-Assistant
 python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
-echo "HUGGINGFACEHUB_API_TOKEN=your_token_here" > .env
+echo "GROQ_API_KEY=your_key_here" > .env
 python -m app.ingest          # index a PDF
 uvicorn app.api:app --port 8000  # start API
 streamlit run frontend/ui.py    # start UI
