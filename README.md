@@ -4,7 +4,7 @@
 ![LangChain](https://img.shields.io/badge/LangChain-0.2-green)
 ![FastAPI](https://img.shields.io/badge/FastAPI-0.115-teal)
 ![Deployed](https://img.shields.io/badge/Deployed-Render-purple)
-[![Live Demo](https://img.shields.io/badge/Demo-Live-brightgreen)](https://your-app.onrender.com)
+[![Live Demo](https://img.shields.io/badge/Demo-Live-brightgreen)](https://financial-document-q-a-rag-powered-sec.onrender.com/docs)
 
 A production-ready Retrieval-Augmented Generation (RAG) system
 that enables natural language Q&A over SEC 10-K financial filings.
@@ -13,8 +13,7 @@ Pre-indexed on Apple Inc.'s 2023 Annual Report.
 ## Demo
 ![Demo GIF](assets/demo.gif)
 
-**Live:** https://financial-rag-ui.onrender.com (free tier — ~60s warm-up)
-**API docs:** https://financial-rag-api.onrender.com/docs
+**Live:** https://financial-document-q-a-rag-powered-sec.onrender.com/docs (free tier — ~60s warm-up)
 
 ## Architecture
 ```
