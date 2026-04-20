@@ -6,7 +6,7 @@ langchain-groq==0.1.9
 langchain-text-splitters==0.2.0
 
 # Vector store
-faiss-cpu==1.8.0
+faiss-cpu>=1.7.4
 
 # PDF loading
 pymupdf==1.24.10
