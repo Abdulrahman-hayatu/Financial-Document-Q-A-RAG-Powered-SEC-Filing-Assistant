@@ -4,6 +4,8 @@ langchain-community==0.2.16
 langchain-huggingface>=0.0.4
 langchain-text-splitters==0.2.0
 
+pydantic==2.8.2
+pydantic-core==2.20.1
 # Vector store
 faiss-cpu>=1.7.4
 
