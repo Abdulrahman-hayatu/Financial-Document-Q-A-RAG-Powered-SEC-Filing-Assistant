@@ -8,14 +8,16 @@ services:
     envVars:
       - key: GROQ_API_KEY
         sync: false
+      - key: HUGGINGFACEHUB_API_TOKEN
+        sync: false
     healthCheckPath: /
 
   - type: web
     name: financial-rag-ui
     runtime: python
     pythonVersion: "3.11.9"
-    buildCommand: pip install streamlit requests python-dotenv
-    startCommand: streamlit run frontend/ui.py --server.port $PORT --server.address 0.0.0.0
+    buildCommand: pip install -r requirements-frontend.txt
+    startCommand: streamlit run frontend/ui.py --server.port $PORT --server.address 0.0.0.0 --server.headless true
     envVars:
       - key: API_URL
-        value: https://financial-rag-api.onrender.com
+        value: https://financial-document-q-a-rag-powered-sec.onrender.com/
