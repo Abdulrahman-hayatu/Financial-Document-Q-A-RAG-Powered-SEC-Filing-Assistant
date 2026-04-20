@@ -1,35 +1,39 @@
 # Core LangChain stack
 langchain==0.2.16
 langchain-community==0.2.16
-langchain-huggingface>=0.0.4
+langchain-huggingface==0.0.3
+langchain-groq==0.1.9
 langchain-text-splitters==0.2.0
 
-pydantic==2.8.2
-pydantic-core==2.20.1
 # Vector store
-faiss-cpu>=1.7.4
+faiss-cpu==1.8.0
 
 # PDF loading
-pymupdf==1.24.10          # PDF parser
+pymupdf==1.24.10
 
 # HuggingFace model hub + sentence embeddings
 sentence-transformers==3.1.1
 huggingface-hub==0.24.6
 
-# LLM inference (free HuggingFace Inference API)
+# LLM inference
 transformers==4.44.2
+tokenizers==0.19.1
 
 # API and frontend
 fastapi==0.115.0
-uvicorn==0.30.6           # ASGI server to run FastAPI
+uvicorn==0.30.6
 streamlit==1.38.0
-python-multipart==0.0.9   # for FastAPI file uploads
-requests==2.32.3          # Streamlit calls FastAPI via HTTP
+python-multipart==0.0.9
+requests==2.32.3
 
 # Evaluation
 ragas==0.1.19
-datasets==2.21.0          # RAGAS requires HuggingFace datasets format
+datasets==2.21.0
 
 # Utilities
 python-dotenv==1.0.1
 pydantic==2.8.2
+pydantic-core==2.20.1
+
+# Groq
+groq==0.11.0
