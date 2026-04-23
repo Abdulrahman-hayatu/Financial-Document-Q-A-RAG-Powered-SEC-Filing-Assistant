@@ -5,3 +5,5 @@ faiss_index/
 *.pyc
 *.pyo
 data/
+0.1.0
+2.14.0
